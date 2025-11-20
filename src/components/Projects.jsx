@@ -12,7 +12,7 @@ import kesteDamena from '../../public/images/kestedamena.jpg'
 
 // Import WordPress project images (you'll need to add these to your images folder)
 // For now, I'll use placeholder imports - replace with actual images
-import customThemeProject from '../../public/images/theme.jpg'
+import customThemeProject from '../../public/images/theme.jfif'
 import woocommerceStore from '../../public/images/kodiprofessional.jpg'
 import customPlugin from '../../public/images/plugin.jpg'
 
