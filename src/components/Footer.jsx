@@ -6,7 +6,7 @@ export default function Footer() {
     { icon: 'fab fa-github', url: 'https://github.com/ArafatMamia' },
     { icon: 'fab fa-linkedin-in', url: 'https://www.linkedin.com/in/arafat-mamia-2779a3312/' },
     { icon: 'fab fa-twitter', url: '#' },
-    { icon: 'fas fa-globe', url: 'arafatportfolio321.netlify.app' },
+    { icon: 'fas fa-globe', url: 'https://arafatmamia321.netlify.app' },
   ]
 
   return (
