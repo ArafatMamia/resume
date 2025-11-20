@@ -26,7 +26,7 @@ export default function Projects({ navigateTo }) {
       image: customThemeProject,
       technologies: ['WordPress', 'theme.json', 'FSE', 'Gutenberg', 'PHP', 'JavaScript'],
       github: '#',
-      live: 'wysemonk',
+      live: 'https://wysemonk.com/',
       category: 'WordPress',
       featured: true
     },
@@ -37,7 +37,7 @@ export default function Projects({ navigateTo }) {
       image: woocommerceStore,
       technologies: ['WooCommerce', 'ACF Pro', 'Custom Checkout', 'Payment Gateway', 'PHP'],
       github: '#',
-      live: 'kodiProfessional',
+      live: 'https://kodiprofessional.ae/',
       category: 'WordPress',
       featured: true
     },
