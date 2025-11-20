@@ -58,8 +58,8 @@ export default function Resume({ navigateTo }) {
   const experiences = [
     {
       title: 'WordPress Developer - Custom Theme Specialist',
-      company: 'Chainlinx Technologies | Addis Ababa, Ethiopia',
-      date: '2024 – Present',
+      company: 'Chainlinx Technologies | UK(Remote)',
+      date: '2024 – 2025',
       points: [
         'Developed custom WordPress themes using theme.json and Full Site Editing (FSE)',
         'Built responsive business websites converting Figma designs to custom WordPress themes',
@@ -70,8 +70,8 @@ export default function Resume({ navigateTo }) {
     },
     {
       title: 'WordPress Developer',
-      company: 'RSOP | United Kingdom (Remote)',
-      date: '2023 – 2024',
+      company: 'Website Developer | Addis Ababa, Ethiopia',
+      date: '2019 – Present',
       points: [
         'Developed custom WordPress plugins extending site functionality',
         'Integrated REST APIs and third-party services into WordPress',
