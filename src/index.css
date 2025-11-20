@@ -1,0 +1,309 @@
+/* src/index.css */
+@import "tailwindcss";
+
+@theme {
+  /* Color palette */
+  --color-primary: #2c3e50;
+  --color-secondary: #3498db;
+  --color-accent: #2980b9;
+  --color-light: #ecf0f1;
+  --color-dark: #1a252f;
+  --color-darker: #0d1318;
+  --color-text: #ecf0f1;
+  --color-text-light: #bdc3c7;
+
+  /* Animation keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  @keyframes bounce-slow {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+  }
+
+  /* Animations */
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 3s ease-in-out infinite;
+  --animate-bounce-slow: bounce-slow 2s ease-in-out infinite;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, var(--color-darker) 0%, var(--color-dark) 100%);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure sections don't overflow */
+section {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Custom component classes */
+.glass {
+  background: rgb(255 255 255 / 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255 255 255 / 0.2);
+  box-shadow: 0 8px 32px 0 rgb(0 0 0 / 0.36);
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--color-secondary);
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255 255 255 / 0.2);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--color-accent);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: -1;
+}
+
+.btn:hover::before {
+  left: 0;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgb(52 152 219 / 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.btn-outline::before {
+  background: var(--color-secondary);
+}
+
+.btn-outline:hover {
+  color: white;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--color-secondary);
+  border-radius: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+}
+/* Add to your index.css */
+@keyframes orbit-1 {
+  0% {
+    transform: translateX(-50%) rotate(0deg) translateY(-140px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg) translateY(-140px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-2 {
+  0% {
+    transform: translateY(-50%) rotate(0deg) translateX(140px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg) translateX(140px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-3 {
+  0% {
+    transform: translateX(-50%) rotate(0deg) translateY(140px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg) translateY(140px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-4 {
+  0% {
+    transform: translateY(-50%) rotate(0deg) translateX(-140px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg) translateX(-140px) rotate(-360deg);
+  }
+}
+
+.animate-orbit-1 {
+  animation: orbit-1 20s linear infinite;
+}
+
+.animate-orbit-2 {
+  animation: orbit-2 20s linear infinite;
+}
+
+.animate-orbit-3 {
+  animation: orbit-3 20s linear infinite;
+}
+
+.animate-orbit-4 {
+  animation: orbit-4 20s linear infinite;
+}
+
+/* Home Component Orbit Animations */
+@keyframes home-orbit-1 {
+  0% {
+    transform: translateX(-50%) rotate(0deg) translateY(-180px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg) translateY(-180px) rotate(-360deg);
+  }
+}
+
+@keyframes home-orbit-2 {
+  0% {
+    transform: translateY(-50%) rotate(0deg) translateX(180px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg) translateX(180px) rotate(-360deg);
+  }
+}
+
+@keyframes home-orbit-3 {
+  0% {
+    transform: translateX(-50%) rotate(0deg) translateY(180px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg) translateY(180px) rotate(-360deg);
+  }
+}
+
+@keyframes home-orbit-4 {
+  0% {
+    transform: translateY(-50%) rotate(0deg) translateX(-180px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg) translateX(-180px) rotate(-360deg);
+  }
+}
+
+.animate-home-orbit-1 {
+  animation: home-orbit-1 25s linear infinite;
+}
+
+.animate-home-orbit-2 {
+  animation: home-orbit-2 25s linear infinite;
+}
+
+.animate-home-orbit-3 {
+  animation: home-orbit-3 25s linear infinite;
+}
+
+.animate-home-orbit-4 {
+  animation: home-orbit-4 25s linear infinite;
+}
+
+/* About Component Orbit Animations (keep these as they are) */
+@keyframes orbit-1 {
+  0% {
+    transform: translateX(-50%) rotate(0deg) translateY(-140px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg) translateY(-140px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-2 {
+  0% {
+    transform: translateY(-50%) rotate(0deg) translateX(140px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg) translateX(140px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-3 {
+  0% {
+    transform: translateX(-50%) rotate(0deg) translateY(140px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg) translateY(140px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-4 {
+  0% {
+    transform: translateY(-50%) rotate(0deg) translateX(-140px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg) translateX(-140px) rotate(-360deg);
+  }
+}
+
+.animate-orbit-1 {
+  animation: orbit-1 20s linear infinite;
+}
+
+.animate-orbit-2 {
+  animation: orbit-2 20s linear infinite;
+}
+
+.animate-orbit-3 {
+  animation: orbit-3 20s linear infinite;
+}
+
+.animate-orbit-4 {
+  animation: orbit-4 20s linear infinite;
+}
