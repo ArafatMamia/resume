@@ -69,8 +69,8 @@ export default function Resume({ navigateTo }) {
       ]
     },
     {
-      title: 'WordPress Developer',
-      company: 'Website Developer | Addis Ababa, Ethiopia',
+      title: 'Website Developer',
+      company: 'Kestedamena | Addis Ababa, Ethiopia',
       date: '2019 – Present',
       points: [
         'Developed custom WordPress plugins extending site functionality',
