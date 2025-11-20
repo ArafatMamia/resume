@@ -126,7 +126,7 @@ export default function Projects({ navigateTo }) {
   const featuredWordPressProjects = projects.filter(project => project.featured)
 
   return (
-    <section className="min-h-screen py-20 bg-dark/70">
+    <section className="min-h-screen py-20">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
           className="section-heading"

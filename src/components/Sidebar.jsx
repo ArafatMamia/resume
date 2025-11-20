@@ -1,3 +1,5 @@
+
+import arafatimage from '../../public/images/arafat.jpg'
 // src/components/Sidebar.jsx
 export default function Sidebar({ activePage, navigateTo, sidebarOpen, setSidebarOpen }) {
   const navItems = [
@@ -12,7 +14,7 @@ export default function Sidebar({ activePage, navigateTo, sidebarOpen, setSideba
     { icon: 'fab fa-github', url: 'https://github.com/ArafatMamia' },
     { icon: 'fab fa-linkedin-in', url: 'https://www.linkedin.com/in/arafat-mamia-2779a3312/' },
     { icon: 'fab fa-wordpress', url: '#' },
-    { icon: 'fas fa-globe', url: 'https://arafatportfolio321.netlify.app' },
+    { icon: 'fas fa-globe', url: 'https://arafatmamia321.netlify.app' },
   ]
 
   // Toggle sidebar function
@@ -42,7 +44,7 @@ export default function Sidebar({ activePage, navigateTo, sidebarOpen, setSideba
         <div className="text-center mb-10 pb-8 border-b border-white/20 mt-4">
           <div className="size-32 bg-secondary rounded-full p-1 mx-auto mb-5">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+              src={arafatimage}
               alt="Arafat Mamia"
               className="size-full rounded-full object-cover border-2 border-darker"
             />
