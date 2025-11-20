@@ -84,7 +84,7 @@ export default function Resume({ navigateTo }) {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a')
-    const pdfUrl = '/cv/arafat-mamia-cv.pdf'
+    const pdfUrl = '/cv/Arafat-Mamia-WordPress-Developer-CV.pdf'
     link.href = pdfUrl
     link.download = 'Arafat-Mamia-WordPress-Developer-CV.pdf'
     link.target = '_blank'
