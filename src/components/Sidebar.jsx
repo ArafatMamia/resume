@@ -43,11 +43,11 @@ export default function Sidebar({ activePage, navigateTo, sidebarOpen, setSideba
         {/* Profile Section */}
         <div className="text-center mb-10 pb-8 border-b border-white/20 mt-4">
           <div className="size-32 bg-secondary rounded-full p-1 mx-auto mb-5">
-            <img
+            {/* <img
               src={arafatimage}
               alt="Arafat Mamia"
               className="size-full rounded-full object-cover border-2 border-darker"
-            />
+            /> */}
           </div>
           <h3 className="text-xl font-bold mb-1 text-text">Arafat Mamia</h3>
           <p className="text-secondary font-medium">WordPress Specialist</p>
